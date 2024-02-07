@@ -15,5 +15,11 @@ build_static : static_lib
 static_lib : main.o helper.o
 		ar -r libstatic.a main.o helper.o
 
+build_shared : shared_lib main.o
+		gcc -l shared -L . -o executable.out
+
+shared_lib: main.o helper.o
+		gcc -shared -fPIC main.o helper.o -o libshared.so
+
 clean	: 
-		rm *.o *.out *.a
+		rm *.o *.out *.a *.dll *.so
