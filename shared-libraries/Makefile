@@ -9,5 +9,11 @@ main.o : main.c library/include/helper.h
 helper.o : library/src/helper.c library/include/helper.h
 		gcc -c library/src/helper.c -I library/include/
 
+build_static : static_lib
+		gcc -L . -l static -o executable.out
+
+static_lib : main.o helper.o
+		ar -r libstatic.a main.o helper.o
+
 clean	: 
-		rm *.o *.out
+		rm *.o *.out *.a

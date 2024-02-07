@@ -16,6 +16,11 @@ gcc option flags:
 -o writes the build output to an output file.
 -I adds the subdirectory ./includes (which can be specified as a relative or absolute path) to the search path of standard headers.
 -c compiles source files without linking (creates .o for each .c).
+-l option tells GCC to link in the specified library
+-L looks in directory for library files
+
+Creating static library:
+ar -r libname.a objectfile1.o objectfile2.o objectfile3.o ...
 
 
 References:
