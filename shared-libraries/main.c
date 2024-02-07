@@ -1,7 +1,7 @@
-#include<stdio.h>
+#include"library/helper.h"
 
 int main()
 {
-    printf(" testing ");
+    print_info();
     return 0;
 }
