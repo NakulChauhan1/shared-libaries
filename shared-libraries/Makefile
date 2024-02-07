@@ -8,3 +8,6 @@ main.o : main.c library/include/helper.h
 
 helper.o : library/src/helper.c library/include/helper.h
 		gcc -c library/src/helper.c -I library/include/
+
+clean	: 
+		rm *.o *.out
